@@ -17,7 +17,7 @@ export interface ContentCardProps {
 
 
 
-const ContentCard = () => {
+const ContentCard = ({title, date}: ContentCardProps) => {
   return (
     <>
     </>

@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Screen from "../page/Figma/screen";
 import MainContent from "../page/layout/Content";
 import MainFooter from "../page/layout/Footer";
 import MainHeader from "../page/layout/Header";
@@ -14,7 +15,8 @@ const MainRouter = () => {
       <MainHeader/>
       <MainContent>
         <Routes>
-          <Route path="" element={<MainPage/>}/>
+          <Route path=""      element={<MainPage/>}/>
+          <Route path="/test" element={<Screen/>}/>
         </Routes>
       </MainContent>
       <MainFooter/>
