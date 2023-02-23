@@ -1,5 +1,5 @@
 import fetchapi from "../api/fetchAPI";
-import { contentUploadAPI, contentUploadFileAPI } from "../api/list";
+import { contentUploadAPI, contentUploadFileAPI, contentUploadResultAPI } from "../api/list";
 import { contentUploadType } from "../type/content";
 
 
@@ -16,20 +16,29 @@ const useUploadHook = {
       fileCnt: fileList.length,
       imgCnt: imgList.length
     })
-    
-    path.imgPath.map((path, idx) => {
-      contentUploadFileAPI({
-        path,
-        file: imgList[idx]
-      })
-    })
 
-    path.filePath.map((path, idx) => {
-      contentUploadFileAPI({
-        path,
-        file: fileList[idx]
-      })
-    })
+    try {
+      await Promise.all([
+        ...path.imgPath.map((path, idx) => {
+          contentUploadFileAPI({
+            path,
+            file: imgList[idx]
+          })
+        }),
+  
+        ...path.filePath.map((path, idx) => {
+          contentUploadFileAPI({
+            path,
+            file: fileList[idx]
+          })
+        })
+      ])
+
+      contentUploadResultAPI(true)
+
+    } catch {
+      contentUploadResultAPI(false)
+    }
 
   },
 
