@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import fetchapi from "./fetchAPI";
 
 
@@ -27,5 +28,19 @@ export const uploadContentFileAPI = async ({path, file} : {
     headers: {
       'Content-Type': 'multipart/form-data'
     }
+  })
+}
+
+
+
+export const signinAPI = async(input : {
+  userid: string;
+  password: string;
+}) : Promise<{
+  userid: string;
+  name: string;
+}> => {
+  return fetchapi.post("/auth/signin", {
+    ...input
   })
 }

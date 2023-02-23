@@ -1,11 +1,12 @@
 import fetchapi from "../api/fetchAPI";
-import { uploadContentAPI, uploadContentFileAPI } from "../api/apilist";
+import { uploadContentAPI, uploadContentFileAPI } from "../api/list";
 import { uploadContentType } from "../store/uploadContent";
 
 
 
 
 const useUploadHook = {
+
   uploadContent : async (uploadContent: uploadContentType) => {
 
     const { title, desc, tag, fileList, imgList } = uploadContent;

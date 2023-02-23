@@ -7,14 +7,14 @@ import { dataState } from "../store/data";
 
 
 const useRegisterHook = {
+  CheckIDValid : () => {
+    
+  },
+
   Register : () => {
-    restapi.get("/url",)
 
   },
 
-  CheckIDValid : () => {
-    
-  }
 }
 
 export default useRegisterHook;
