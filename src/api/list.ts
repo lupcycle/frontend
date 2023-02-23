@@ -39,6 +39,7 @@ export const signinAPI = async(input : {
 }) : Promise<{
   userid: string;
   name: string;
+  token: any;
 }> => {
   return fetchapi.post("/auth/signin", {
     ...input
