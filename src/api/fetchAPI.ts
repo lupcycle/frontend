@@ -3,7 +3,7 @@ import api from "./api";
 
 
 
-const restapi = {
+const fetchapi = {
 
   get: async (url: string) : Promise<any> => {
     return api.instance.get(url)
@@ -18,4 +18,4 @@ const restapi = {
   }
 }
 
-export default restapi;
+export default fetchapi;
