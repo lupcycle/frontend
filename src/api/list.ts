@@ -3,7 +3,7 @@ import fetchapi from "./fetchAPI";
 
 
 
-export const uploadContentAPI = async (input : {
+export const contentUploadAPI = async (input : {
   title: string;
   desc: string;
   tag: string[];
@@ -18,7 +18,7 @@ export const uploadContentAPI = async (input : {
   })
 }
 
-export const uploadContentFileAPI = async ({path, file} : {
+export const contentUploadFileAPI = async ({path, file} : {
   path: string;
   file: FormData;
 }) : Promise<void> => {

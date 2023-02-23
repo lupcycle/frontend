@@ -8,11 +8,11 @@ export interface ContentCardProps {
   img: string[];
 
   username: string;
-  team: string;
+  group: string;
 
-  like: number;
-  isLiked: boolean;
-  isBookmarked: boolean;
+  like?: number;
+  isLiked?: boolean;
+  isBookmarked?: boolean;
 }
 
 

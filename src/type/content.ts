@@ -1,4 +1,4 @@
-export interface uploadContentType {
+export interface contentUploadType {
   title: string;
   desc: string;
   tag: string[];
@@ -7,3 +7,5 @@ export interface uploadContentType {
   imgList: FormData[];
   thumbnail_no: Number;
 }
+
+export const contentSumm

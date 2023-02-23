@@ -1,10 +1,11 @@
 import { atom } from "recoil";
-import { uploadContentDummy } from "../dummy/uploadingContent";
+import { contentUploadDummy } from "../dummy/uploadingContent";
 
 
 
 
-export const uploadContentState = atom({
-  key: 'uploadContentState',
-  default: uploadContentDummy
+export const contentUploadState = atom({
+  key: 'contentUploadState',
+  default: contentUploadDummy
 })
+

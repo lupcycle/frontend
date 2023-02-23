@@ -1,31 +1,31 @@
 import fetchapi from "../api/fetchAPI";
-import { uploadContentAPI, uploadContentFileAPI } from "../api/list";
-import { uploadContentType } from "../store/content";
+import { contentUploadAPI, contentUploadFileAPI } from "../api/list";
+import { contentUploadType } from "../store/content";
 
 
 
 
 const useUploadHook = {
 
-  uploadContent : async (uploadContent: uploadContentType) => {
+  contentUpload : async (contentUpload: contentUploadType) => {
 
-    const { title, desc, tag, fileList, imgList } = uploadContent;
+    const { title, desc, tag, fileList, imgList } = contentUpload;
 
-    const path = await uploadContentAPI({
+    const path = await contentUploadAPI({
       title, desc, tag,
       fileCnt: fileList.length,
       imgCnt: imgList.length
     })
     
     path.imgPath.map((path, idx) => {
-      uploadContentFileAPI({
+      contentUploadFileAPI({
         path,
         file: imgList[idx]
       })
     })
 
     path.filePath.map((path, idx) => {
-      uploadContentFileAPI({
+      contentUploadFileAPI({
         path,
         file: fileList[idx]
       })
@@ -33,7 +33,7 @@ const useUploadHook = {
 
   },
 
-  updateContent : async (uploadContent: uploadContentType) => {}
+  updateContent : async (contentUpload: contentUploadType) => {}
 
 }
 
