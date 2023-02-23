@@ -5,7 +5,9 @@ export interface ContentCardProps {
   date: string;
   tag: string[];
   content: string;
-  img: string[];
+
+  imgurl: string[];
+  fileurl: string[];
 
   username: string;
   group: string;
@@ -17,11 +19,11 @@ export interface ContentCardProps {
 
 
 
-const ContentCard = ({title, date}: ContentCardProps) => {
+const ContenSummaryCard = ({title, date}: ContentCardProps) => {
   return (
     <>
     </>
   )
 }
 
-export default ContentCard;
+export default ContenSummaryCard;
