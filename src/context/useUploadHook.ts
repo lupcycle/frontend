@@ -1,5 +1,5 @@
 import fetchapi from "../api/fetchAPI";
-import { contentUploadAPI, contentUploadFileAPI, contentUploadResultAPI } from "../api/list";
+import { contentUploadAPI, contentUploadFileAPI, contentUploadResultAPI } from "../api/upload";
 import { contentUploadType } from "../type/content";
 
 
