@@ -1,5 +1,3 @@
-
-
 export interface accountType {
   userid: string;
   name: string;

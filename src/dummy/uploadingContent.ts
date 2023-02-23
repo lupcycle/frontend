@@ -1,4 +1,4 @@
-import { uploadContentType } from "../store/uploadContent";
+import { uploadContentType } from "../type/content";
 
 
 

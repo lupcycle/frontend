@@ -1,6 +1,6 @@
 import fetchapi from "../api/fetchAPI";
 import { uploadContentAPI, uploadContentFileAPI } from "../api/list";
-import { uploadContentType } from "../store/uploadContent";
+import { uploadContentType } from "../store/content";
 
 
 
