@@ -19,12 +19,12 @@ const useSigninHook = {
 
       api.setAuthorizationHeader(response.token["access-token"])
 
-      isSigninErrorSetter({...isSigninError,  hasAccountInfoNotMatched: false})
+      isSigninErrorSetter({...isSigninError, isLogined: true})
       accountInfoSetter(response.account)
       navigate("/")
 
     } catch {
-      isSigninErrorSetter({...isSigninError,  hasAccountInfoNotMatched: false})
+      isSigninErrorSetter({...isSigninError, hasAccountInfoNotMatched: false})
     }
   },
 
