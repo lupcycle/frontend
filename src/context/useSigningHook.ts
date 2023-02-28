@@ -6,9 +6,9 @@ import { accountInfoState, isSigninErrorState } from "../store/account";
 import { signinType } from "../type/account";
 
 
-const useSigninHook = {
+const useSigninHook = () => {
 
-  Signin : async ({userid, password}: signinType) => {
+  const Signin = async ({userid, password}: signinType) => {
 
     const [isSigninError, isSigninErrorSetter ] = useRecoilState(isSigninErrorState)
     const accountInfoSetter = useSetRecoilState(accountInfoState)
@@ -26,10 +26,14 @@ const useSigninHook = {
     } catch {
       isSigninErrorSetter({...isSigninError, hasAccountInfoNotMatched: false})
     }
-  },
+  }
 
-  Signout : async () => {}
+  const Signout = async () => {}
 
+  return {
+    Signin,
+    Signout
+  }
 }
 
 export default useSigninHook;

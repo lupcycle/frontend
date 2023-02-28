@@ -2,7 +2,7 @@ import fetchapi from "./fetchAPI";
 
 
 
-export const fetchContentListAPI = async (status: string) : Promise<{
+export const fetchContentListAPI = async (status: string, keword?: string) : Promise<{
   contentNo: string;
   writer: string;
   group: string;
@@ -12,7 +12,7 @@ export const fetchContentListAPI = async (status: string) : Promise<{
   createdAt: string;
   modifiedAt: string;
   thumbnailNo: string;
-}[]> => fetchapi.get(`/content/list?${status}`)
+}[]> => fetchapi.get(`/content/list${status}`)
 
 
 export const fetchContentViewAPI = async (no: number) : Promise<{

@@ -31,6 +31,3 @@ export const contentUploadFileAPI = async ({path, file} : {
 
 export const contentUploadResultAPI = async (result: boolean) : Promise<void> =>
   fetchapi.post(`/content/upload/result?${result ? 'true' : 'false'}`)
-
-
-

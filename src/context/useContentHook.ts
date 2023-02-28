@@ -2,12 +2,16 @@
 
 
 
-const useContentHook = {
+const useContentHook = () => {
 
-  loadContentList : () => {},
+  const loadContentList = () => {}
 
-  loadContentInfo : () => {}
+  const loadContentInfo = () => {}
 
+  return {
+    loadContentList,
+    loadContentInfo
+  }
 }
 
 export default useContentHook;

@@ -6,15 +6,15 @@ import { dataState } from "../store/data";
 
 
 
-const useRegisterHook = {
-  CheckIDValid : () => {
-    
-  },
+const useRegisterHook = () => {
+  const checkIDValid = () => {}
 
-  Register : () => {
+  const register = () => {}
 
-  },
-
+  return {
+    checkIDValid,
+    register
+  }
 }
 
 export default useRegisterHook;

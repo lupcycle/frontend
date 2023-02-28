@@ -5,9 +5,9 @@ import { contentUploadType } from "../type/content";
 
 
 
-const useUploadHook = {
+const useUploadHook = () => {
 
-  contentUpload : async (contentUpload: contentUploadType) => {
+  const contentUpload = async (contentUpload: contentUploadType) => {
 
     const { title, desc, tag, fileList, imgList } = contentUpload;
 
@@ -40,10 +40,14 @@ const useUploadHook = {
       contentUploadResultAPI(false)
     }
 
-  },
+  }
 
-  updateContent : async (contentUpload: contentUploadType) => {}
+  const updateContent = async (contentUpload: contentUploadType) => {}
 
+  return {
+    contentUpload,
+    updateContent
+  }
 }
 
 export default useUploadHook;
